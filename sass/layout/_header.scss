@@ -1,0 +1,182 @@
+.header {
+    z-index: 100;
+    padding: rem-calc(8px) 0;
+    transition: all 0.2s ease-in-out;
+    background-color: $body-base-color;
+    overflow-x: hidden;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+
+    &__menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $body-base-color;
+
+        @include md {
+            clear: none;
+            float: right;
+            max-height: none;
+            display: block;
+            background: transparent;
+        }
+
+        &-box {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            width: 100%;
+        }
+    
+        &-item {
+            display: inline-block;
+            margin: rem-calc(16px) 0 0 rem-calc(16px);
+        }
+
+        &-link {
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $text-color;
+            font-family: $font-family-title;
+            padding: rem-calc(15px) rem-calc(10px);
+
+            &:hover {
+                color: $primary-color;
+            }
+
+            @include md {
+             //   padding: rem-calc(12px);
+            }
+        }
+    }
+
+    &__logo {
+        float: left;
+        margin-left: $wrapper-xs;
+        width: 40%;
+
+        @include lg {
+            width: 20%;
+            margin: 0;
+        }
+
+        &-img {
+            display: inline-block;
+            width: 100%;
+        }
+    } 
+
+    &__links {
+        display: none;
+
+        @include md {
+            display: flex;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        &-item {
+            margin-top: rem-calc(8px);
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $primary-color;
+            padding: rem-calc(12px);
+
+            &:hover {
+                color: $primary-ligh-color;
+            }
+        }
+    }
+}
+
+// Scrolling activation menu background
+.header--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header--scrolling {
+    background-color: $body-base-color;
+    border-bottom: #0000001c 2px solid;
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,.1);
+}
+
+// Header menu icon and only css for drop
+.menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: $wrapper-sm;
+    user-select: none;
+
+    @include md {
+        display: none;
+    }
+}
+
+.navicon {
+    background: $brand-color;
+    display: block;
+    height: rem-calc(4px);
+    position: relative;
+    transition: background .2s ease-out;
+    width: rem-calc(24px);
+    border-radius: 2px;
+
+    &::before,
+    &::after {
+        background: $primary-color;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+        border-radius: 2px;
+    }
+
+    &::before {
+        top: rem-calc(8px);
+    }
+
+    &::after {
+        top: rem-calc(-8px);
+    }
+}
+
+// Css action for menu button
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked ~ .header__menu {
+    max-height: 240px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}

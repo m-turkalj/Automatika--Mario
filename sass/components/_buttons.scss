@@ -1,0 +1,12 @@
+.btn {
+    display: flex;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: $body-base-color;
+    letter-spacing: 0.05em;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-family-base;
+    background-color: $body-base-color;
+    color: $text-color;
+    overflow-x: hidden;
+}
+
+label {
+    font-family: $font-family-base;
+    color: $primary-color;
+    letter-spacing: 0.05em;
+    @include font-size($font-size-form...);
+}
+
+svg {
+    vertical-align: middle;
+}
+
+img {
+    width: 100%;
+}
+
+u {
+    text-decoration: underline;
+}

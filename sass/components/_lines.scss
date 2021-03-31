@@ -1,0 +1,79 @@
+.line {
+    border-radius: 10px;
+    color: $text-color;
+
+    &__horizontal,
+    &__vertical {
+        display: block;
+        position: absolute;
+        border: 0px solid rgba(2, 66, 132, 0.5);
+        background: rgba(2, 66, 132, 0.5);
+
+        
+    }
+
+    &__horizontal {
+        width: rem-calc(100px);
+        height: 5px;
+        left: $wrapper-sm;
+
+        @include md {
+            width: rem-calc(250px);
+            left: $wrapper-lg;
+        }
+
+        &--right {
+            right: $wrapper-sm;
+            left: auto;
+
+            @include md {
+                right: $wrapper-lg;
+            }
+        }
+    }
+
+    &__vertical {
+        height: rem-calc(100px);
+        width: 5px;
+        top: $wrapper-sm;
+        left: 0;
+
+        @include md {
+            height: rem-calc(250px);
+            top: 150px;
+        }
+
+        &--right {
+            left: auto;
+            right: 0;
+            top: $wrapper-sm;
+
+            @include md {
+                top: $wrapper-lg;
+            }
+        }
+    }
+
+    &__small {
+        display: none;
+
+        @include md {
+            display: block;
+            border: 1px solid;
+            height: rem-calc(22px);
+            opacity: 0.9;
+        }
+    }
+}
+
+
+[data-aos="reveal-up"] {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+    transition-property: transform;
+    transition-delay: 0.5s;
+}
+  
+[data-aos="reveal-up"].aos-animate {
+    transform: scaleY(1);
+}

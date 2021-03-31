@@ -1,0 +1,100 @@
+// -----------BREAKPOINT VARIABLES-------------------------------------- 
+
+// Small smartphones
+$screen-xs-min: 370px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// -----------FONT VARIABLES-------------------------------------- 
+
+$font-family-base: 'Avenir 85';
+$font-family-secondary: 'Rubik Mono One';
+$font-family-title: 'Comfortaa';
+
+// Font weight
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+
+// Mobile fonts
+$font-size-base: rem-calc(15px);
+$heading-1: (26px, 32px, $font-weight-normal) !default;
+$heading-2: (24px, 33px, $font-weight-bold) !default; 
+$heading-3: (28px, 33px, $font-weight-bold) !default; // posaljite nam upit  u kontakt dijelu
+$heading-4: (18px, 20px, $font-weight-bold) !default; // KONTAKT INFORMACIJE u kontakt dijelu, vrijedi i za POSALJITE NAM UPIT
+$heading-5: (16px, 24px, $font-weight-bold) !default;
+
+// $font-size-button: (15px, 20px, $font-weight-normal) !default;
+$font-size-message: (24px, 38px, $font-weight-bold) !default;
+$font-size-form: (14px, 18px, $font-weight-bold) !default;
+$font-size-form-contact: (15px, 20px, $font-weight-bold) !default;
+$font-size-footer: (14px, 20px, $font-weight-bold) !default;
+
+// Desktop fonts
+$font-desktop-base: rem-calc(18px);
+$heading-desktop-1: (55px, 60px, $font-weight-bold) !default;  
+$heading-desktop-2: (48px, 54px, $font-weight-bold) !default; 
+$heading-desktop-3: (32px, 36px, $font-weight-bold) !default; // posaljite nam upit  u kontakt dijelu
+$heading-desktop-4: (24px, 27px, $font-weight-bold) !default; // kontakt informacije u kontakt dijelu
+$heading-desktop-5: (18px, 24px, $font-weight-bold) !default; // nazivi ispod slika icona
+
+$font-desktop-form: (20px, 26px, $font-weight-bold) !default;
+$font-desktop-form-contact: (18px, 24px, $font-weight-bold) !default;
+$font-desktop-footer: (20px, 30px, $font-weight-normal) !default;
+$font-footer-addition: (14px, 21px, $font-weight-bold) !default;
+
+
+// -----------COLORS VARIABLES-------------------------------------- 
+
+// Background color for <body>
+$body-base-color: #F4F4F4;
+
+// Global text color on <body>
+$text-color: #3C3F3F;
+
+// Primary green color
+$primary-color: #024284;
+$primary-ligh-color: #68BBE7;
+
+// Brand color on Logo and location
+$brand-color: #F06E10;
+
+
+
+/* Examples for variable name: $brand-color, $primary-color( or $secondary-color), and than later $primary-light,
+   $primary-dark, $primary-light-1, $primary-dark-1 etc.
+*/
+
+
+// -----------WRAPPER VARIABLES-------------------------------------- 
+$wrapper-xs: rem-calc(20px);
+$wrapper-sm: rem-calc(32px);
+$wrapper-md: rem-calc(48px);
+$wrapper-lg: rem-calc(132px);
+$wrapper-xl: rem-calc(200px);
+
+
+
+$wrap-vertical-footer: rem-calc(130px) 0 rem-calc(156px);
+$wrap-vertical-footer-desktop: rem-calc(200px) 0;
+
+
+// -----------CONTAINER VARIABLES-------------------------------------- 
+
+$container: 0 rem-calc(20px);
+
+$container-center-small: 0 rem-calc(100px);
+$container-right-small: rem-calc(100px);
+
+$container-center: 0 rem-calc(200px);
+$container-right: rem-calc(200px);

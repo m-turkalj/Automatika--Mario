@@ -1,0 +1,50 @@
+.hero-section {
+    background-image: url(../img/hero-bckg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 88px;
+
+    @include md {
+        background-size: cover;
+        margin-top: 134px;
+    }
+
+    &__text-box {
+       display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: rem-calc(114px);
+
+        @include md {
+            margin-top: rem-calc(245px);
+            justify-content: space-between;
+        }
+    }
+
+    &__caption {
+        color: $primary-color;
+        margin-bottom: rem-calc(24px);
+        
+        &-logo {
+            display: inline-block;
+            width: rem-calc(48px);
+            height: rem-calc(48px);
+        }
+
+        @include flex-column-center
+    }
+
+    // &__button-wrapper {
+    //     align-self: center;
+    //     margin-bottom: rem-calc(45px);
+
+    //     @include sm {
+    //         margin-top: rem-calc(56px);
+    //     }
+    // }
+}

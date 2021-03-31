@@ -1,0 +1,86 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-top: $wrapper-sm;
+    overflow-x: hidden;
+
+    @include md {
+        padding-top: $wrapper-lg;
+    }
+    
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/SVG/footer-full-bckg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: rem-calc(-175px);
+        z-index: 100;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/SVG/footer-bottom-bckg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+        padding: $wrap-vertical-footer;
+
+        @include md {
+            padding: $wrap-vertical-footer-desktop;
+        }
+    }
+
+    &__contact-about {
+        margin-top: rem-calc(37px);
+        margin-bottom: rem-calc(37px);
+        display: flex;
+        flex-direction: column;
+
+        @include md {
+            margin-top: rem-calc(30px);
+            margin-bottom: rem-calc(30px);
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        @include xl {
+            margin-top: rem-calc(30px);
+            margin-bottom: rem-calc(30px);
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+
+    &__logo-box {
+        display: flex;
+        justify-content: center;
+        
+        &--text {
+            margin-top: rem-calc(5.8px);
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

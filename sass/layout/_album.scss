@@ -1,0 +1,185 @@
+.image-section {
+    padding-top: $wrapper-md;
+    position: relative;
+
+    @include md {
+        padding-top: $wrapper-lg;
+    }
+
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: $wrapper-md; 
+
+    @include md {
+        padding-top: $wrapper-sm;
+    }
+
+    &--right {
+        @include md {
+            flex-direction: row;
+        }
+    }
+
+    &--left {
+        @include md {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__product,
+    &__icon,
+    &__album {
+        margin: 0 $wrapper-md;
+    }
+
+    &__product {
+        display: none;
+
+        @include md {
+            order: 1;
+            display: block;
+            flex: 1 0 20%;
+        }
+        
+
+        &-img {
+            border-radius: 34px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
+
+            &:hover {
+                transform: scale(1.3);
+                transition: .5s ease-in-out;
+            }
+        }
+    }
+
+    &__icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
+        flex: 1 0 20%;
+
+        
+
+        &-box {
+            display: inline-block;
+            border: 1px solid $primary-color;
+            border-radius: 100%;
+        }
+
+        &-img {
+            padding: $wrapper-sm;
+            width: auto;
+        }
+    }
+
+    &__album {
+        order: 3;
+        flex: 1 3 60%;
+
+        display: flex;
+        box-sizing: border-box;
+        height: 30vh;
+        margin: $wrapper-sm auto 0;
+
+        background-color: $primary-ligh-color;
+
+        @include md {
+            height: 34vh;
+            padding: $wrapper-md;
+            background-color: unset;
+            margin: 0 auto;
+        }
+
+        &-link {
+            display: inline-block;
+            margin-right: $wrapper-sm;
+        }
+
+        &-img {
+            width: 200%;
+            height: 100%;
+            object-fit: cover; 
+            transition: .5s;
+        }
+    }
+
+    &__bckg {
+        display: none;
+        
+        @include md {
+            display: block;
+            position: absolute;
+            width: 100%;
+        //    height: 7%;
+            z-index: -1;
+            left: 0;
+            margin-top: -$wrapper-sm;
+            background-color: $primary-ligh-color;
+            margin-top: rem-calc(-2px);
+            height: 10%;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+                        0 2px 2px rgba(0,0,0,0.11), 
+                        0 4px 4px rgba(0,0,0,0.11), 
+                        0 6px 8px rgba(0,0,0,0.11),
+                        0 8px 16px rgba(0,0,0,0.11);
+        }
+        
+
+        &--right {
+            @include md {
+                left: 52%;
+                border-radius: 75px 0 0 75px;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.874) 36.67%, 
+                                                rgba(255, 255, 255, 0) 63.72%), 
+                                                rgba(2, 66, 132, 0.75);
+            }
+        }
+
+        &--left {
+            @include md {
+                right: 52%;
+                left: unset;
+                border-radius: 0 75px 75px 0;
+                background: linear-gradient(270deg, rgba(255, 255, 255, 0.874) 36.67%, 
+                                                rgba(255, 255, 255, 0) 63.72%), 
+                                                rgba(2, 66, 132, 0.75);
+            }
+        }
+    }
+}
+
+.box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: $wrapper-xs rem-calc(4px);
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    border-radius: rem-calc(8px);
+    z-index: 1;
+
+    @include md {
+        margin: $wrapper-xs rem-calc(4px);
+    }
+}
+
+.box:hover { 
+    flex: 1 1 60%; 
+
+    @include md {
+        flex: 1 1 65%; 
+    }
+}
+
+.box:hover > img {
+  width: 100%;
+}

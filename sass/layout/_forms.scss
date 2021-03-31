@@ -1,0 +1,126 @@
+.register-section {
+    background-image: url(../img/form-bckg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        margin-top: rem-calc(67px);
+
+        @include sm {
+            margin-top: rem-calc(67px);
+        }
+
+        & > h2 {
+            padding-top: $wrapper-md;
+            color: $body-base-color;
+            text-align: left;
+            text-transform: capitalize;
+
+            @include md {
+                padding-top: $wrapper-md;
+            }
+        }
+    }
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    &__contact {
+        background-color: $body-base-color;
+
+        @include md {
+            width: 70%;
+        }
+    }
+
+    &__info {
+        background-color: $primary-color;
+
+        @include md {
+            width: 30%;
+        }
+    } 
+
+    &__img {
+        width: fit-content;
+    }
+}
+
+.form-content {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 $wrapper-sm;
+
+    @include md {
+        margin: 0 $wrapper-md;
+    }
+
+    & > :last-child {
+        flex: 4 1 auto;
+        margin-top: $wrapper-sm;
+    }
+}
+
+.form-group {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    margin: $wrapper-sm auto 0;
+
+    @include md {
+        margin: $wrapper-sm $wrapper-lg 0 0;
+    }
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid $primary-color;
+    background-color: $body-base-color;
+ // text-transform: uppercase;
+    
+    outline: none;
+    padding: $wrapper-xs 0 rem-calc(16px) 0;
+
+    &:focus {
+        border: 0.5px; 
+        border-bottom: 2px solid $primary-color;
+    }
+
+    &__email-field {
+
+        &:focus:valid {
+            background-image: url(../img/SVG/input-valid.svg); 
+            @include input-state;
+        }
+    
+        &:focus:invalid {
+            background-image: url(../img/SVG/input-invalid.svg); 
+            @include input-state;
+        }
+    }
+}
+
+input::placeholder, textarea::placeholder {
+    color: $primary-color;
+}
+
+textarea {
+    resize: none;
+    padding-top: rem-calc(15px);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

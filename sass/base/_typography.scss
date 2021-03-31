@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa-Bold.eot');
+    src: url('../fonts/Comfortaa-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Comfortaa-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Mono One';
+    src: url('../fonts/RubikMonoOne-Regular.eot');
+    src: url('../fonts/RubikMonoOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RubikMonoOne-Regular.woff2') format('woff2'),
+        url('../fonts/RubikMonoOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir 85';
+    src: url('../fonts/Avenir-Heavy.eot');
+    src: url('../fonts/Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Avenir-Heavy.woff2') format('woff2'),
+        url('../fonts/Avenir-Heavy.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+p {
+    font-family: $font-family-base;
+    line-height: rem-calc(28px);
+    font-size: $font-size-base;
+
+    @include sm {
+        font-size: $font-desktop-base;
+        line-height: rem-calc(30px);
+    }
+}
+
+p + p {
+    margin-top: rem-calc(30px);
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-family-title;
+    font-weight: $font-weight-bold;
+    @include center-uppercase
+}
+
+h1,
+.heading-1 {
+    font-family: $font-family-secondary;
+    color: $primary-color;
+    text-align: center;
+    opacity: 0.9;
+    text-shadow: 2px 4px 12px rgba(2, 95, 191, 0.6);
+    @include font-size($heading-1...);
+    
+    @include sm {
+        letter-spacing: 0.1em;
+        @include font-size($heading-desktop-1...)
+    }
+}
+
+h2,
+.heading-2 {
+    color: $primary-color;
+    letter-spacing: 0.07em;
+    margin-bottom: $wrapper-sm;
+    @include font-size($heading-2...);
+
+    @include sm {
+        letter-spacing: 0.08em;
+        margin-bottom: $wrapper-md;
+        @include font-size($heading-desktop-2...)
+    }
+}
+
+h3,
+.heading-3 {
+    letter-spacing: 0.08em;
+    color: $primary-color;
+    text-transform: none;
+    padding: $wrapper-sm 0;
+    @include font-size($heading-3...);
+
+    @include sm {
+        text-align: left;
+        padding: $wrapper-md;
+        @include font-size($heading-desktop-3...);
+    }
+}
+
+h4,
+.heading-4 {
+    letter-spacing: 0.08em;
+    color: $body-base-color;
+    padding: $wrapper-sm;
+    @include font-size($heading-4...);
+
+    @include sm {
+        @include font-size($heading-desktop-4...);
+    }
+}
+
+h5,
+.heading-5 {
+    font-family: $font-family-base;
+    letter-spacing: 0.05em;
+    color: $primary-color;
+    margin-top: rem-calc(8px);
+    @include font-size($heading-5...);
+
+    @include sm {
+        margin-top: rem-calc(14px);
+        @include font-size($heading-desktop-5...);
+    }
+}

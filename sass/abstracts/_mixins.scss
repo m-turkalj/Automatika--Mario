@@ -1,0 +1,85 @@
+// -----------BREAKPOINT MIXINS--------------------------------------
+
+// Extra Small devices
+@mixin xs {
+    @media only screen and (min-width: $screen-xs-min) {
+        @content;
+    }
+}
+
+// Small devices
+@mixin sm {
+    @media only screen and (min-width: $screen-sm-min) {
+        @content;
+    }
+}
+ 
+ // Medium devices
+ @mixin md {
+    @media only screen and (min-width: $screen-md-min) {
+        @content;
+    }
+}
+ 
+ // Large devices
+ @mixin lg {
+    @media only screen and (min-width: $screen-lg-min) {
+        @content;
+    }
+}
+ 
+ // Extra large devices
+ @mixin xl {
+    @media only screen and (min-width: $screen-xl-min) {
+        @content;
+    }
+}
+
+ // Custom devices
+@mixin rwd($screen) {
+    @media only screen and (min-width: $screen+'px') {
+        @content;
+    }
+}
+
+
+// -----------REM-CALC MIXINS--------------------------------------
+
+@mixin font-size($font-size, $line-height, $font-weight ) {
+    font-size: rem-calc($font-size);
+    line-height: rem-calc($line-height);
+    font-weight: $font-weight;
+}
+
+
+// -----------TITLE MIXINS--------------------------------------
+
+@mixin center-uppercase {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+// -----------FLEX CENTER COLUMNS MIXINS--------------------------------------
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// -----------TITLE BUTTON MIXINS--------------------------------------
+
+@mixin btn-center-uppercase {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+// -----------INPUT :VALID AND :INVALID STATE MIXIN--------------------------------------
+
+@mixin input-state {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+    padding-right: 0;
+}
