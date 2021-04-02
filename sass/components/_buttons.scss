@@ -1,12 +1,26 @@
 .btn {
     display: flex;
     text-decoration: none;
-    text-transform: capitalize;
     cursor: pointer;
     color: $body-base-color;
     letter-spacing: 0.05em;
-
+    
     &:hover {
-        text-decoration: underline;
+        transform: scale(1.1, 1.1);
+        transition: .2s;
+    }
+
+    &:active {
+        color: #8b8b8b;
+    }
+
+    &--send-icon {
+        position: absolute;
+        right: -$wrapper-md;
+        bottom: rem-calc(-16px);
+
+        @include md {
+            right: rem-calc(64px);
+        }
     }
 }

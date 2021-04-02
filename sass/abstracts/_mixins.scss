@@ -67,6 +67,14 @@
     align-items: center;
 }
 
+// -----------FLEX CENTER COLUMNS MIXINS--------------------------------------
+
+@mixin flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // -----------TITLE BUTTON MIXINS--------------------------------------
 
 @mixin btn-center-uppercase {

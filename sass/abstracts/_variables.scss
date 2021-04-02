@@ -30,7 +30,7 @@ $font-weight-bold: 700;
 $font-size-base: rem-calc(15px);
 $heading-1: (26px, 32px, $font-weight-normal) !default;
 $heading-2: (24px, 33px, $font-weight-bold) !default; 
-$heading-3: (28px, 33px, $font-weight-bold) !default; // posaljite nam upit  u kontakt dijelu
+$heading-3: (28px, 36px, $font-weight-bold) !default; // posaljite nam upit  u kontakt dijelu
 $heading-4: (18px, 20px, $font-weight-bold) !default; // KONTAKT INFORMACIJE u kontakt dijelu, vrijedi i za POSALJITE NAM UPIT
 $heading-5: (16px, 24px, $font-weight-bold) !default;
 
@@ -64,7 +64,7 @@ $text-color: #3C3F3F;
 
 // Primary green color
 $primary-color: #024284;
-$primary-ligh-color: #68BBE7;
+$primary-ligh-color: rgb(104, 187, 231);
 
 // Brand color on Logo and location
 $brand-color: #F06E10;

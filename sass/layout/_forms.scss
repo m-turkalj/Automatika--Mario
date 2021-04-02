@@ -3,23 +3,25 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    height: 75vh;
+    margin-top: $wrapper-md;
 
     &__title {
-        margin-top: rem-calc(67px);
+       margin-top: $wrapper-sm;
 
-        @include sm {
-            margin-top: rem-calc(67px);
+        @include md {
+           margin-top: $wrapper-lg;
         }
 
         & > h2 {
-            padding-top: $wrapper-md;
             color: $body-base-color;
-            text-align: left;
-            text-transform: capitalize;
+            text-align: center;
+            text-transform: uppercase;
 
             @include md {
-                padding-top: $wrapper-md;
-            }
+                text-align: left;
+                text-transform: capitalize;
+             }
         }
     }
 }
@@ -27,45 +29,120 @@
 .form-box {
     display: flex;
     flex-direction: column;
+    margin-top: $wrapper-sm;
+//  padding: rem-calc(16px);
+    box-shadow: -30px 30px 50px rgba(0, 0, 0, 0.16);
 
     @include md {
         flex-direction: row;
         justify-content: space-evenly;
+        padding: 0;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        
+
+        @include md {
+            margin-bottom: $wrapper-md;
+        }
+
+        & > img {
+            width: 20%;
+            align-self: center;
+            padding: 1rem;
+
+            @include md {
+                width: 7%;
+                margin-right: $wrapper-lg;
+                padding: 0;
+            }
+        }
     }
 
     &__contact {
         background-color: $body-base-color;
+        padding: $wrapper-xs;
 
         @include md {
             width: 70%;
+            padding: $wrapper-md;
         }
     }
 
     &__info {
         background-color: $primary-color;
+        padding: $wrapper-sm;
 
         @include md {
             width: 30%;
+            padding: $wrapper-md;
+        }
+
+        & > img {
+            width: 55%;
+            margin: 0 auto;
+            display: block;
         }
     } 
 
+    &__info-text {
+        text-decoration: underline;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        margin-bottom: $wrapper-sm;
+        justify-content: space-between;
+
+        & > img {
+            width: fit-content;
+        }
+    }
+
     &__img {
-        width: fit-content;
+        width: 70%;
+
+        @include md {  
+            width: fit-content;
+            margin-right: $wrapper-sm;
+        }
+
+        &:hover {
+            transform: scale(1.1, 1.1);
+            transition: .5s;
+        }
+
+        &:active {
+            opacity: 1;
+        }
+    }
+
+    &__media {
+        margin-top: $wrapper-sm;
+
+        & > a:not(:last-child) {
+            margin-right: $wrapper-sm;
+        }
+
+        @include flex-row-center;
     }
 }
 
 .form-content {
     display: flex;
     flex-flow: row wrap;
-    margin: 0 $wrapper-sm;
-
-    @include md {
-        margin: 0 $wrapper-md;
-    }
+    position: relative;
 
     & > :last-child {
         flex: 4 1 auto;
         margin-top: $wrapper-sm;
+    }
+
+    &__img {
+        width: fit-content;
     }
 }
 
@@ -76,7 +153,7 @@
     margin: $wrapper-sm auto 0;
 
     @include md {
-        margin: $wrapper-sm $wrapper-lg 0 0;
+        margin: $wrapper-md $wrapper-lg 0 0;
     }
 }
 
@@ -84,10 +161,12 @@
     border: none;
     border-bottom: 1px solid $primary-color;
     background-color: $body-base-color;
- // text-transform: uppercase;
-    
     outline: none;
-    padding: $wrapper-xs 0 rem-calc(16px) 0;
+    padding: rem-calc(8px) 0;
+
+    @include md {
+        padding: $wrapper-xs 0 rem-calc(16px) 0;
+    }
 
     &:focus {
         border: 0.5px; 

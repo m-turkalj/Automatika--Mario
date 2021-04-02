@@ -1,6 +1,7 @@
 .container {
     width: 100%;
     margin: 0 auto;
+    overflow-x: hidden;
 
     @include sm {
         max-width: 540px;
@@ -20,12 +21,12 @@
 }
 
 .wrapper {
-    padding-top: $wrapper-xs;
-    padding-bottom: $wrapper-xs;
+    padding-top: $wrapper-md;
+//    padding-bottom: $wrapper-md;
 
     @include lg {
-        padding-top: $wrapper-xl;
-        padding-bottom: $wrapper-lg;
+        padding-top: $wrapper-lg;
+ //       padding-bottom: $wrapper-lg;
     }
 }
 
@@ -39,7 +40,7 @@
     }
 
     @include lg {
-        padding-top: $wrapper-xl;
-        padding-bottom: $wrapper-xl;
+        padding-top: $wrapper-md;
+        padding-bottom: $wrapper-md;
     }
 }

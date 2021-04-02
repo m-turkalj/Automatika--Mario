@@ -70,7 +70,6 @@ h2,
 .heading-2 {
     color: $primary-color;
     letter-spacing: 0.07em;
-    margin-bottom: $wrapper-sm;
     @include font-size($heading-2...);
 
     @include sm {
@@ -85,12 +84,10 @@ h3,
     letter-spacing: 0.08em;
     color: $primary-color;
     text-transform: none;
-    padding: $wrapper-sm 0;
+    text-align: left;
     @include font-size($heading-3...);
 
     @include sm {
-        text-align: left;
-        padding: $wrapper-md;
         @include font-size($heading-desktop-3...);
     }
 }
@@ -99,7 +96,7 @@ h4,
 .heading-4 {
     letter-spacing: 0.08em;
     color: $body-base-color;
-    padding: $wrapper-sm;
+    margin-bottom: $wrapper-md;
     @include font-size($heading-4...);
 
     @include sm {
