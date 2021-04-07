@@ -6,6 +6,10 @@ body {
     font-family: $font-family-base;
     background-color: $body-base-color;
     color: $text-color;
+    position: relative;
+}
+
+main {
     overflow-x: hidden;
 }
 

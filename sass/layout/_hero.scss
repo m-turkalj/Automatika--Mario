@@ -9,20 +9,23 @@
 
     margin-top: 88px;
 
-    @include md {
+    @include lg {
         background-size: cover;
-        margin-top: 134px;
+        margin-top: 128px;
     }
 
     &__text-box {
        display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-top: rem-calc(114px);
+        margin-top: rem-calc(140px);
+
+        @include xs {
+            margin-top: rem-calc(175px);
+        }
 
         @include md {
             margin-top: rem-calc(245px);
-            justify-content: space-between;
         }
     }
 
