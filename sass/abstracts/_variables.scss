@@ -69,7 +69,8 @@ $primary-ligh-color: rgb(104, 187, 231);
 // Brand color on Logo and location
 $brand-color: #F06E10;
 
-
+$footer-bckg-color: #4f4f4f;
+$footer-line-color: #2F2F2F;
 
 /* Examples for variable name: $brand-color, $primary-color( or $secondary-color), and than later $primary-light,
    $primary-dark, $primary-light-1, $primary-dark-1 etc.
@@ -84,9 +85,8 @@ $wrapper-lg: rem-calc(132px);
 $wrapper-xl: rem-calc(200px);
 
 
-
-$wrap-vertical-footer: rem-calc(130px) 0 rem-calc(156px);
-$wrap-vertical-footer-desktop: rem-calc(200px) 0;
+// $wrap-vertical-footer: rem-calc(132px) 0 rem-calc(16px);
+$wrap-vertical-footer-desktop: rem-calc(132px) 0 rem-calc(16px);
 
 
 // -----------CONTAINER VARIABLES-------------------------------------- 

@@ -1,29 +1,71 @@
 .footer {
     background-image: url(../img/footer-bckg-mobile.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+ //   background-size: 100%;
+    background-size: contain;
+    background-position: top;
     position: relative;
-    margin-top: $wrapper-sm;
+    margin-top: $wrapper-md;
     overflow-x: hidden;
 
     @include md {
         background-image: url(../img/footer-bckg-desktop.png);
+        background-size: 113%;
         margin-top: rem-calc(264px);
     }
 
-    &__content {
-
+    @include lg {
+        background-size: contain;
     }
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include md {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__content-text {
+        text-align: justify;
+        color: $body-base-color;
+        max-width: rem-calc(240px);
+
+        @include md {
+            text-align: center;
+            align-self: center;
+            max-width: rem-calc(320px);
+            
+
+            & > p {
+            font-size: rem-calc(14px);
+            color: $footer-bckg-color;
+            text-shadow: -1px 1px 1px rgba(2, 66, 132, 0.20);
+            }
+        }
+
+        @include lg {
+            max-width: rem-calc(544px);
+            margin-right: $wrapper-lg;
+
+            & > p {
+                font-size: rem-calc(24px);
+                color: $footer-bckg-color;
+                text-shadow: -1px 1px 1px rgba(2, 66, 132, 0.20);
+            }
+        }
+    }
+
 
     &__info {
         display: flex;
         flex-direction: column;
         z-index: 1000;
-    //    padding: $wrap-vertical-footer;
+        background-color: $footer-bckg-color;
+        //    padding: $wrap-vertical-footer;
 
         @include md {
          //   padding: $wrap-vertical-footer-desktop;
@@ -50,5 +92,44 @@
             flex-direction: row;
             justify-content: space-evenly;
         }
+    }
+
+    &__absolute-img {
+        display: none;
+
+        @include md {
+            display: block;
+            max-width: 30%;
+            position: absolute;
+            left: 0;
+            bottom: 240px;
+        }
+
+        @include lg {
+            max-width: fit-content;
+            bottom: 152px;
+        }
+    }
+
+    &__fixed-img {
+        padding: $wrapper-md;
+        width: 50%;
+
+        @include md {
+            padding: 0;
+            width: 30%;
+        }
+
+        @include lg {
+            padding: $wrap-vertical-footer-desktop;
+            max-width: fit-content;
+        }
+    }
+}
+
+.none {
+    
+    @include md {
+        display: none;
     }
 }

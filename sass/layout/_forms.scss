@@ -47,21 +47,24 @@
     &__title {
         display: flex;
         justify-content: space-between;
-        
 
         @include md {
+            margin-bottom: rem-calc(16px);
+        }
+        
+        @include lg {
             margin-bottom: $wrapper-md;
         }
 
         & > img {
             width: 20%;
-            align-self: center;
-            padding: 1rem;
+            align-self: baseline;
+            padding: rem-calc(6px);
 
-            @include md {
+            @include lg {
                 width: 7%;
-                margin-right: $wrapper-lg;
-                padding: 0;
+                margin-right: rem-calc(100px);
+                padding: rem-calc(8px);
             }
         }
     }
@@ -72,17 +75,21 @@
 
         @include md {
             width: 70%;
+            padding: $wrapper-sm;
+        }
+
+        @include lg {
             padding: $wrapper-md;
         }
     }
 
     &__info {
         background-color: $primary-color;
-        padding: $wrapper-md;
+        padding: $wrapper-sm;
 
-        @include md {
+        @include lg {
             width: 30%;
-            padding: $wrapper-md;
+            padding: rem-calc(64px);
         }
 
         & > img {
@@ -108,10 +115,13 @@
     }
 
     &__img {
-        width: 70%;
+        width: 60%;
 
         @include md {  
-            width: fit-content;
+            margin-right: rem-calc(16px);
+        }
+
+        @include lg {  
             margin-right: $wrapper-sm;
         }
 
@@ -154,6 +164,10 @@
     margin: $wrapper-sm auto 0;
 
     @include md {
+        margin: $wrapper-sm $wrapper-xs 0 0;
+    }
+
+    @include lg {
         margin: $wrapper-md $wrapper-lg 0 0;
     }
 }
@@ -164,6 +178,7 @@
     background-color: $body-base-color;
     outline: none;
     padding: rem-calc(8px) 0;
+    margin-right: rem-calc(8px);
 
     @include md {
         padding: $wrapper-xs 0 rem-calc(16px) 0;

@@ -20,6 +20,10 @@
         bottom: rem-calc(-16px);
 
         @include md {
+            right: -$wrapper-sm;
+        }
+
+        @include lg {
             right: rem-calc(64px);
         }
     }
