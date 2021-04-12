@@ -1,9 +1,14 @@
 .btn {
     display: flex;
+    flex-direction: column;
     text-decoration: none;
     cursor: pointer;
     color: $body-base-color;
     letter-spacing: 0.05em;
+
+    & > p {
+        margin-top: 0;
+    }
     
     &:hover {
         transform: scale(1.1, 1.1);
@@ -16,15 +21,17 @@
 
     &--send-icon {
         position: absolute;
-        right: -$wrapper-md;
+        right: rem-calc(-16px);
         bottom: rem-calc(-16px);
+        max-width: 25%;
 
         @include md {
-            right: -$wrapper-sm;
+            max-width: 20%;
         }
 
         @include lg {
-            right: rem-calc(64px);
+            right: rem-calc(96px);
+            max-width: 10%;
         }
     }
 }

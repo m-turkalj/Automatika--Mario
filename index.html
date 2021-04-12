@@ -26,40 +26,37 @@
                 
                 <ul class="header__menu" id="header__menu">
                     <li class="header__menu-item">
-                        <a href="#hero" class="header__menu-link">Partneri</a>
+                        <a href="#intro" class="header__menu-link">Partneri</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#intro" class="header__menu-link">Galerija</a>
+                        <a href="#image" class="header__menu-link">Galerija</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#portfolio" class="header__menu-link">Kontakt</a>
+                        <a href="#register" class="header__menu-link">Kontakt</a>
                     </li>
                 </ul>
     
                 <ul class="header__links">
-                    <li class="header__links-item"><a href="#" class="header__links-link">Nica</a></li>
+                    <li class="header__links-item"><a href="https://www.niceforyou.com/en/solutions/gate-door" class="header__links-link" target="_blank">Nica</a></li>
                     <div class="line line__small"><span></span></div>
-                    <li class="header__links-item"><a href="#" class="header__links-link">Assa abloy</a></li>
+                    <li class="header__links-item"><a href="https://www.assaabloyentrance.com/en/about-us/our-heritage/besam/" class="header__links-link" target="_blank">Assa abloy</a></li>
                 </ul>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="hero-section">
+        <section id="hero" class="hero-section">
             <div class="hero-section__text-box">
-            <h1 class="heading-1">Where manual <br> meets electronic</h1>
-            <!-- <div class="hero-section__button-wrapper">
-                <a href="#" class="btn slideleft">Register your interest</a>
-            </div> -->
-            <div class="hero-section__caption">
-                <p>Povuci za više sadržaja</p>
-                <img src="img/SVG/scroll-for-more-icon.svg" alt="Automatika Mario logo" class="hero-section__caption-logo">
+                 <h1 class="heading-1">Where manual <br> meets electronic</h1>
+                <div class="hero-section__caption">
+                    <p>Povuci za više sadržaja</p>
+                    <img src="img/SVG/scroll-for-more-icon.svg" alt="Automatika Mario logo" class="hero-section__caption-logo">
+                </div>
             </div>
-        </div>
         </section>
 
-        <section class="intro-section">
+        <section id="intro" class="intro-section">
             <div class="container wrapper">
                 <div class="intro-section__about">
                     <h2 class="heading-2">Naši pouzdani partneri</h2>
@@ -121,7 +118,7 @@
             </div>
         </section>
 
-        <section class="image-section">
+        <section id="image" class="image-section">
             <div class="container wrapper">
                 <h2 class="heading-2">Automatska vrata</h2>
                 <div class="product-card product-card--right ">
@@ -283,7 +280,7 @@
             </div>
         </section>
 
-        <section class="register-section">
+        <section id="register" class="register-section">
             <div class="container">
                 <div class="register-section__title">
                     <h2 class="heading-2">Kontaktirajte nas</h2>
@@ -296,7 +293,7 @@
                         </div>
                         <div class="form-content">
                             <a href="#" class="btn btn--send-icon">
-                                <img src="img/SVG/send-mail-icon.svg" alt="Send mail icon" class="form-box__img">
+                                <img src="img/SVG/send-mail-icon.svg" alt="Send mail icon">
                             </a>
                             <div class="form-group">
                                 <label for="User name">Vaše ime i prezime</label>	
@@ -329,8 +326,6 @@
                             <div class="form-box__info-text">
                                 <a href="#" class="btn">
                                     <p>Naselje Gaza 14b</p>
-                                </a>
-                                <a href="#" class="btn">
                                     <p>47000 Karlovac</p>
                                 </a>
                             </div>
@@ -366,7 +361,7 @@
             </div>
         </section>
 
-        <section class="footer">
+        <section id="footer" class="footer">
             <div class="container">
                 <div class="footer__content">
                     <div class="footer__fixed-img">
@@ -387,22 +382,63 @@
 
             <div class="footer__info">
                 <div class="line line__separator"><span></span></div>
+
                 <div class="footer__info-about">
-                    <ul class="nav">
-                        <li class="nav__item"><strong>Trent Quinton</strong></li>
-                        <li class="nav__item"><a class="nav__link" href="tel:021894070" target="_blank" rel="noopener noreferrer">021 894 070</a></li>
-                        <li class="nav__item"><a class="nav__link" href="mailto:trent.quinton@bayleys.co.nz" target="_blank" rel="noopener noreferrer">trent.quinton@bayleys.co.nz</a></li>
-                    </ul>
-                    <ul class="nav">
-                        <li class="nav__item">Julie Quinton</li>
-                        <li class="nav__item"><a class="nav__link" href="tel:021894071" target="_blank" rel="noopener noreferrer">021 894 071</a></li>
-                        <li class="nav__item"><a class="nav__link" href="mailto:julie.quinton@bayleys.co.nz" target="_blank" rel="noopener noreferrer">julie.quinton@bayleys.co.nz</a></li>
-                    </ul>
-                    <ul class="nav">
-                        <li class="nav__item"><strong>Ellis Prince</strong></li>
-                        <li class="nav__item"><a class="nav__link" href="tel:0212612590" target="_blank" rel="noopener noreferrer">021 261 2590</a></li>
-                        <li class="nav__item"><a class="nav__link" href="mailto:ellis.prince@bayleys.co.nz" target="_blank" rel="noopener noreferrer">ellis.prince@bayleys.co.nz</a></li>
-                    </ul>
+                    <div class="container">
+                        <div class="footer__split">
+                            <div class="payment">
+                                <div class="payment__box">
+                                    <div class="payment__link">
+                                        <a href="https://www.paypal.com/hr/webapps/mpp/home" target="_blank"><img src="img/SVG/paypal.svg" alt="Paypal"></a>
+                                    </div>
+                                    <div class="payment__link">
+                                        <a href="https://www.visa.com.hr/" target="_blank"><img src="img/SVG/visa.svg" alt="Visa"></a>
+                                    </div>
+                                    <div class="payment__link">
+                                        <a href="https://www.mastercard.hr/hr-hr.html" target="_blank"><img src="img/SVG/mastercard.svg" alt="Mastercard"></a>
+                                    </div>
+                                    <div class="payment__link">
+                                        <a href="https://www.pbzcard.hr/hr/o-nama/media-centar-i-novosti/vijesti/postanite-korisnik-odabranih-american-express-kartica-od-12-do-162019-bez-upisnine-i-clanarine/"  target="_blank"><img src="img/SVG/american-express.svg" alt="American-express"></a>
+                                    </div>
+                                </div>
+                                <p>&#169; 2012 - 2021 Automatika Mario d.o.o.</p>
+                            </div>
+                            
+                            <div class="contact">
+                                <!-- <div class="contact__title">
+                                    <h5>Brzi Kontakt</h5>
+                                </div> -->
+                                <div class="contact__item">
+                                    <h5>MAIL:</h5>
+                                    <a class="contact__link" href="mailto:info@automatika-mario.hr" target="_blank" rel="noopener noreferrer">info@automatika-mario.hr</a>
+                                    <a class="contact__link" href="mailto:ivica@automatika-mario.hr" target="_blank" rel="noopener noreferrer">ivica@automatika-mario.hr</a>
+                                    <a class="contact__link" href="mailto:info@automatika-mario.hr " target="_blank" rel="noopener noreferrer">info@automatika-mario.hr </a>
+                                </div>
+                                <div class="contact__item">
+                                    <h5>ADRESA:</h5>
+                                    <a class="contact__link" href="https://goo.gl/maps/ja3wsk6CJHoUtkNS7" target="_blank" rel="noopener noreferrer">Naselje Gaza 14b <br> 47000 Karlovac, Croatia</a>
+                                </div>
+                                <div class="contact__item">
+                                    <h5>ŽIRO RAČUN:</h5>
+                                    <p>1234567891023</p>
+                                </div>
+                                <div class="contact__item">
+                                    <h5>OIB:</h5>
+                                    <p>46172093825</p>
+                                </div>
+                                <div class="contact__item">
+                                    <h5>MOBITEL:</h5>
+                                    <p>+385 98 7631 701</p>
+                                </div>
+                                <div class="contact__item">
+                                    <h5>POSLOVNI PARTNERI:</h5>
+                                    <a href="#">Nice,</a>
+                                    <a href="#">Assa abloy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>  
             
