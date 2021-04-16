@@ -27,7 +27,7 @@
     }
 
     &__text {
-    //    margin-top: rem-calc(16px);
+        margin-top: rem-calc(16px);
         max-width: rem-calc(506px);
 
         @include sm {
@@ -64,12 +64,14 @@
         }
 
         @include md {
+            border-radius: 40px 0 0 40px;
+        }
+
+        @include lg {
             position: absolute;
             bottom: 50px;
             right: 13%;
-            border-radius: 40px 0 0 40px;
             max-width: 36%;
-            
         }
     }
 }
@@ -81,7 +83,6 @@
 }
 
 .intro-image {
-    
     align-self: center;
 
     &__link {

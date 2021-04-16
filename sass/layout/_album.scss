@@ -4,7 +4,6 @@
     @include md {
         padding-top: $wrapper-lg;
     }
-
 }
 
 .product-card {
@@ -33,6 +32,14 @@
     &__icon,
     &__album {
         margin: 0 $wrapper-md;
+
+        @include md {
+            margin: 0 rem-calc(16px);
+        }
+
+        @include lg {
+            margin: 0 $wrapper-md;
+        }
     }
 
     &__product {
@@ -66,8 +73,6 @@
         align-items: center;
         order: 2;
         flex: 1 0 20%;
-
-        
 
         &-box {
             display: inline-block;
@@ -119,12 +124,10 @@
             display: block;
             position: absolute;
             width: 100%;
-        //    height: 7%;
             z-index: -1;
             left: 0;
-            margin-top: -$wrapper-sm;
             background-color: $primary-ligh-color;
-            margin-top: rem-calc(-2px);
+            margin-top: rem-calc(-3px);
             height: 10%;
             box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
                         0 2px 2px rgba(0,0,0,0.11), 
@@ -132,26 +135,37 @@
                         0 6px 8px rgba(0,0,0,0.11),
                         0 8px 16px rgba(0,0,0,0.11);
         }
+
+        @include lg {
+            margin-top: rem-calc(-8px);
+        }
         
 
         &--right {
             @include md {
-                left: 52%;
                 border-radius: 75px 0 0 75px;
                 background: linear-gradient(90deg, rgba(255, 255, 255, 0.874) 36.67%, 
                                                 rgba(255, 255, 255, 0) 63.72%), 
                                                 rgba(2, 66, 132, 0.75);
             }
+
+            @include lg {
+                left: 52%;
+            }
         }
 
         &--left {
             @include md {
-                right: 52%;
-                left: unset;
+                right: 0;
                 border-radius: 0 75px 75px 0;
                 background: linear-gradient(270deg, rgba(255, 255, 255, 0.874) 36.67%, 
                                                 rgba(255, 255, 255, 0) 63.72%), 
                                                 rgba(2, 66, 132, 0.75);
+            }
+
+            @include lg {
+                right: 52%;
+                left: unset;
             }
         }
     }
@@ -163,20 +177,12 @@
     transition: .5s;
     margin: $wrapper-xs rem-calc(4px);
     box-shadow: 0 20px 30px rgba(0,0,0,.1);
-    border-radius: rem-calc(8px);
+    border-radius: $wrapper-xs;
     z-index: 1;
-
-    @include md {
-        margin: $wrapper-xs rem-calc(4px);
-    }
 }
 
 .box:hover { 
-    flex: 1 1 60%; 
-
-    @include md {
-        flex: 1 1 65%; 
-    }
+    flex: 1 1 60%;
 }
 
 .box:hover > img {

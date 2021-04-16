@@ -132,7 +132,7 @@
     &__box {
         display: flex;
         width: fit-content;
-        margin-top: $wrapper-xs;
+        margin-top: rem-calc(64px);
     }
 
     &__link {
