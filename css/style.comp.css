@@ -457,8 +457,7 @@ h5,
     color: #F4F4F4;
     background-color: #4f4f4f; }
   .footer__info-about {
-    margin-top: 2.3125rem;
-    margin-bottom: 2.3125rem; }
+    margin: 2rem 0; }
   .footer__split {
     display: flex;
     flex-direction: column-reverse; }
@@ -731,10 +730,10 @@ input[type=number]::-webkit-outer-spin-button {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
+    background: #F4F4F4;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: #F4F4F4; }
+    align-items: center; }
     @media only screen and (min-width: 992px) {
       .header__menu {
         clear: none;
@@ -764,16 +763,10 @@ input[type=number]::-webkit-outer-spin-button {
     width: 50%; }
     @media only screen and (min-width: 768px) {
       .header__logo {
-        width: 23%; } }
+        width: 24%; } }
     @media only screen and (min-width: 992px) {
       .header__logo {
-        width: 32%;
-        margin: 0; } }
-    .header__logo-img {
-      width: 88%; }
-      @media only screen and (min-width: 992px) {
-        .header__logo-img {
-          width: 60%; } }
+        width: 20%; } }
   .header__links {
     display: none; }
     @media only screen and (min-width: 992px) {
@@ -794,8 +787,11 @@ input[type=number]::-webkit-outer-spin-button {
 .menu-icon {
   cursor: pointer;
   float: right;
-  padding: 2rem;
+  padding: 1.6875rem;
   user-select: none; }
+  @media only screen and (min-width: 370px) {
+    .menu-icon {
+      padding: 2.1875rem; } }
   @media only screen and (min-width: 992px) {
     .menu-icon {
       display: none; } }
@@ -849,11 +845,11 @@ input[type=number]::-webkit-outer-spin-button {
   height: 80vh;
   display: flex;
   justify-content: center;
-  margin-top: 88px; }
+  margin-top: 5.5rem; }
   @media only screen and (min-width: 992px) {
     .hero-section {
       background-size: cover;
-      margin-top: 128px; } }
+      margin-top: 8rem; } }
   .hero-section__text-box {
     display: flex;
     flex-direction: column;
@@ -967,7 +963,8 @@ label {
 svg {
   vertical-align: middle; }
 
-img {
+img,
+video {
   width: 100%; }
 
 u {

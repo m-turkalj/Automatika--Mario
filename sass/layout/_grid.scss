@@ -21,11 +21,9 @@
 
 .wrapper {
     padding-top: $wrapper-md;
-//    padding-bottom: $wrapper-md;
 
     @include lg {
         padding-top: $wrapper-lg;
- //       padding-bottom: $wrapper-lg;
     }
 }
 

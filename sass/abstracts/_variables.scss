@@ -27,6 +27,7 @@ $font-weight-bold: 700;
 
 
 // Mobile fonts
+$font-size-smallest: rem-calc(14px);
 $font-size-base: rem-calc(15px);
 $heading-1: (26px, 32px, $font-weight-normal) !default;
 $heading-2: (24px, 33px, $font-weight-bold) !default; 
@@ -68,6 +69,8 @@ $primary-ligh-color: rgb(104, 187, 231);
 
 // Brand color on Logo and location
 $brand-color: #F06E10;
+
+$btn-color: #8b8b8b;
 
 $footer-bckg-color: #4f4f4f;
 $footer-line-color: #2F2F2F;

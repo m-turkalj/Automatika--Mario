@@ -16,10 +16,8 @@
         clear: both;
         max-height: 0;
         transition: max-height .2s ease-out;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         background: $body-base-color;
+        @include flex-column-center;
 
         @include lg {
             clear: none;
@@ -52,10 +50,6 @@
             &:hover {
                 color: $primary-color;
             }
-
-            @include md {
-             //   padding: rem-calc(12px);
-            }
         }
     }
 
@@ -64,20 +58,11 @@
         width: 50%;
 
         @include md {
-            width: 23%;
+            width: 24%;
         }
 
         @include lg {
-            width: 32%;
-            margin: 0;
-        }
-
-        &-img {
-            width: 88%;
-            
-            @include lg {
-                width: 60%;
-            }
+            width: 20%;
         }
     } 
 
@@ -112,8 +97,12 @@
 .menu-icon {
     cursor: pointer;
     float: right;
-    padding: $wrapper-sm;
+    padding: rem-calc(27px);
     user-select: none;
+
+    @include xs {
+        padding: rem-calc(35px);
+    }
 
     @include lg {
         display: none;

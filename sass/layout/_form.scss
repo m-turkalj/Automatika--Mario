@@ -11,20 +11,16 @@
 
     &__title {
         padding: $wrapper-md 0;
-        @include md {
-
-        }
 
         & > h2 {
             color: $body-base-color;
-            text-align: center;
-            text-transform: uppercase;
+            @include center-uppercase;
 
             @include md {
                 text-align: left;
                 text-transform: capitalize;
                 margin: 0;
-             }
+            }
         }
     }
 }

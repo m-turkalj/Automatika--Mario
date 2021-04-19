@@ -14,11 +14,6 @@
         display: flex;
         flex-direction: column;
         position: relative;
-     //   margin-top: $wrapper-md;
-
-        @include sm {
-     //       margin-top: $wrapper-lg;
-        } 
 
         @include lg {
             flex-direction: row;

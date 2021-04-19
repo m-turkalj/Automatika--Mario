@@ -1,7 +1,6 @@
 .footer {
     background-image: url(../img/footer-bckg-mobile.png);
     background-repeat: no-repeat;
- //   background-size: 100%;
     background-size: contain;
     background-position: top;
     position: relative;
@@ -18,11 +17,8 @@
         background-size: contain;
     }
 
-
     &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-column-center;
 
         @include md {
             flex-direction: row-reverse;
@@ -41,7 +37,7 @@
             
 
             & > p {
-            font-size: rem-calc(14px);
+            font-size: $font-size-smallest;
             color: $footer-bckg-color;
             text-shadow: -1px 1px 1px rgba(2, 66, 132, 0.20);
             }
@@ -99,8 +95,7 @@
     }
 
     &__info-about {
-        margin-top: rem-calc(37px);
-        margin-bottom: rem-calc(37px);
+        margin: $wrapper-sm 0;
     }
 
     &__split {
@@ -121,7 +116,7 @@
     }
 }
 
-// Contact and payment part of footer
+// Contact and payment card of footer
 .payment {
     display: flex;
     flex-direction: column;
@@ -168,16 +163,6 @@
     padding: 0 rem-calc(20px);
     display: flex;
     flex-wrap: wrap;
-
-    // &__title {
-    //     display: block;
-    //     width: 100%;
-
-    //     & > h5 {
-    //         text-align: start;
-    //         margin-top: 0;
-    //     }
-    // }
 
     &__item {
         letter-spacing: 0.02em;

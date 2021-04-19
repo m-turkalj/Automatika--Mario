@@ -94,7 +94,6 @@
         box-sizing: border-box;
         height: 30vh;
         margin: $wrapper-sm auto 0;
-
         background-color: $primary-ligh-color;
 
         @include md {
@@ -144,9 +143,9 @@
         &--right {
             @include md {
                 border-radius: 75px 0 0 75px;
-                background: linear-gradient(90deg, rgba(255, 255, 255, 0.874) 36.67%, 
-                                                rgba(255, 255, 255, 0) 63.72%), 
-                                                rgba(2, 66, 132, 0.75);
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.874) 36.67%,
+                rgba(255, 255, 255, 0) 63.72%), 
+                rgba(2, 66, 132, 0.75);
             }
 
             @include lg {
@@ -159,8 +158,8 @@
                 right: 0;
                 border-radius: 0 75px 75px 0;
                 background: linear-gradient(270deg, rgba(255, 255, 255, 0.874) 36.67%, 
-                                                rgba(255, 255, 255, 0) 63.72%), 
-                                                rgba(2, 66, 132, 0.75);
+                rgba(255, 255, 255, 0) 63.72%), 
+                rgba(2, 66, 132, 0.75);
             }
 
             @include lg {

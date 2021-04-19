@@ -51,7 +51,6 @@
     font-weight: $font-weight;
 }
 
-
 // -----------TITLE MIXINS--------------------------------------
 
 @mixin center-uppercase {
@@ -73,13 +72,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-// -----------TITLE BUTTON MIXINS--------------------------------------
-
-@mixin btn-center-uppercase {
-    text-align: center;
-    text-transform: uppercase;
 }
 
 // -----------INPUT :VALID AND :INVALID STATE MIXIN--------------------------------------
